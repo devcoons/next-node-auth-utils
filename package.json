@@ -1,0 +1,50 @@
+{
+    "name": "next-node-auth-utils",
+    "version": "0.1.0",
+    "type": "module",
+    "license": "MIT",
+    "sideEffects": false,
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": { "type": "git", "url": "https://github.com/devcoons/next-node-auth-utils.git" },
+    "bugs": { "url": "https://github.com/devcoons/next-node-auth-utils/issues" },
+    "homepage": "https://github.com/devcoons/next-node-auth-utils#readme",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        },
+        "./node": {
+            "types": "./dist/node.d.ts",
+            "import": "./dist/node.js"
+        },
+        "./next": {
+            "types": "./dist/next.d.ts",
+            "import": "./dist/next.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "clean": "rimraf dist"
+    },
+    "peerDependencies": {
+        "next": ">=13.4",
+        "zod": ">=3.22"
+    },
+    "dependencies": {
+        "@node-rs/argon2": "^1.8.3"
+    },
+    "devDependencies": {
+        "@types/node": "^20",
+        "tsup": "^8.0.1",
+        "typescript": "^5.6.2",
+        "rimraf": "^6.0.1"
+    },
+    "engines": {
+        "node": ">=18"
+    }
+}
